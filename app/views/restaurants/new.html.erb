@@ -1,0 +1,24 @@
+<%= render "navbar" %>
+
+<div class="container">
+<h1 class="text-center">Add a new Restaurant</h1>
+  <div class=“row”>
+    <div class="d-flex justify-content-center">
+      <div class="w-50">
+        <%= simple_form_for(@restaurant) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :phone_number %>
+          <%= f.input :category %>
+          <%= f.submit class:"btn btn-dark w-100 mt-3"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="text-center">
+     <%= link_to "List of restaurants", restaurants_path(@restaurants) %>
+  </div>
+
+</div>

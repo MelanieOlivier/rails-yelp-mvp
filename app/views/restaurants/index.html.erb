@@ -1,0 +1,32 @@
+<%= render "navbar" %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Restaurants</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="px-3">Name</th>
+        <th class="px-3">Address</th>
+        <th class="px-3">Phone Number</th>
+        <th class="px-3">Category</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @restaurants.each do |restaurant| %>
+        <tr>
+          <td class="px-3"><%= restaurant.name %></td>
+          <td class="px-3"><%= restaurant.address %></td>
+          <td class="px-3"><%= restaurant.phone_number %></td>
+          <td class="px-3"><%= restaurant.category %></td>
+          <td><%= link_to 'Show', restaurant, class:"btn btn-success" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
